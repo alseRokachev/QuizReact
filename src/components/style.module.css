@@ -110,6 +110,10 @@
     font-size: 13px;
 }
 
+.answers:hover {
+    cursor: pointer;
+}
+
 .correct_container {
     position: absolute;
     width: 600px;
@@ -129,6 +133,10 @@
     top: 5%;
     font-size: 20px;
     color: #cbcbcb;
+}
+
+.x:hover {
+    cursor: pointer;
 }
 
 .answers_list {

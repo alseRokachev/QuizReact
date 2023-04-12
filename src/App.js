@@ -83,6 +83,7 @@ const questions = [
 function App() {
     const [step, setStep] = useState(0)
     const [corr, setCorr] = useState(0)
+    const [start, setStart] = useState(false)
     const quest = questions[step];
     const chooseVar = (index) => {
         setStep(step + 1)
@@ -92,11 +93,14 @@ function App() {
     }
     return (
         <div className="App">
-            {
+            {!start && (
+                <button onClick={() => setStart(true)} className={'btn'}>Начать</button>
+            )}
+            {start && (
                 step !== questions.length ?
                     <Card step={step} quest={quest} chooseVar={chooseVar} questArr={questions}/> :
                     <Result corr={corr} questArr={questions}/>
-            }
+                )}
         </div>
     );
 }

@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import classes from "./style.module.css";
-
 const Result = (props) => {
     const [modal, setModal] = useState(false)
     const emodjArr = ['😀', '🙂', '🤪', '🔥']
